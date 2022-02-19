@@ -96,6 +96,62 @@
 
   <!-- scripts -->
   <script type="text/javascript" src="assets/js/navigation.js"></script>
+  
+  <!-- very simple darkmode feature -->
+  <style>
+  .light-mode {
+  background: white;
+  color: #444;
+}
+
+.dark-mode {
+  background: #444;
+  color: white;
+}
+
+input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+label {
+  display: block;
+  width: 3rem;
+  height: 1.5rem;
+  background-color: #477a85;
+  border-radius: 100px;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0 0 20px #477a8550;
+}
+
+label::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-color: #e8f5f7;
+  position: absolute;
+  border-radius: 70px;
+  top: 4px;
+  left: 5px;
+  transition: 0.5s;
+}
+
+input:checked + label:after {
+   left: calc(100% - 5px);
+   transform: translateX(-100%);
+   }
+
+input:checked + label {
+   background-color: #243d42;
+   }
+  
+</style>
+  
   <script>
     function myFunction() {
   var checkBox = document.querySelector("#myCheck");
