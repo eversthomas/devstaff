@@ -96,6 +96,17 @@
 
   <!-- scripts -->
   <script type="text/javascript" src="assets/js/navigation.js"></script>
+  <script>
+    function myFunction() {
+  var checkBox = document.querySelector("#myCheck");
+  var text = document.querySelector("body");
+  if (checkBox.checked == true){
+    text.classList.add("dark-mode");
+  } else {
+     text.classList.remove("dark-mode");
+  }
+}
+  </script>
 
 </body>
 
